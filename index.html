@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Buddy Chatbot</title>
+</head>
+<body>
+  <h1>Welcome to Book Buddy!</h1>
+  <p>Ask our chatbot to recommend your next favorite book 📚</p>
+
+  <!-- Watson Assistant Embed Code -->
+  <script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "a9c8127f-4722-4597-8766-a3fa4f69af72", // The ID of this integration.
+    region: "au-syd", // The region your integration is hosted in.
+    serviceInstanceID: "951502a6-7398-4031-b159-9e96080a0532", // The ID of your service instance.
+    onLoad: async (instance) => { await instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+</body>
+</html>
